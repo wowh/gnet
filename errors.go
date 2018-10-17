@@ -1,6 +1,6 @@
 package gnet
 
-import "github.com/pkg/errors"
+import "errors"
 
 var (
 	ErrServerAlreadyStart         = errors.New("tcp server already started")
