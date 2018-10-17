@@ -11,7 +11,7 @@ func NewServer() (*TcpServer, error) {
 		return nil, err
 	}
 
-	return nil, err
+	return &s, nil
 }
 ```
 ## handle connection

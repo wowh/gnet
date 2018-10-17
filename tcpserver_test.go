@@ -15,7 +15,7 @@ func HandleNewConn(s *TcpServer) {
 	}
 }
 
-var dataChan chan []byte = make(chan []byte)
+var dataChan = make(chan []byte)
 
 type ServerConnListener struct{}
 
@@ -38,7 +38,7 @@ func NewServer() (*TcpServer, error) {
 
 	go HandleNewConn(&s)
 
-	return nil, err
+	return &s, nil
 }
 
 func TestServer(t *testing.T) {
