@@ -38,7 +38,7 @@ func (s *TcpServer) ConnNum() int {
 	return s.connNum
 }
 
-func (s *TcpServer) NewConnChan() chan *TcpConnection {
+func (s *TcpServer) NewConnChan() <-chan *TcpConnection {
 	return s.newConnChan
 }
 
